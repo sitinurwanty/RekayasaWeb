@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Java Web Media Login Page</title>
+<link href="images/logo-javawebmedia.png" rel="shortcut icon">
+<link href="css/style.css" rel="stylesheet">
+<!-- Jquery -->
+<link href="jquery/jquery-ui.css" rel="stylesheet">
+</head>
+
+<body>
+<section class="container">
+	<header>Hai <a href="#" title="Update profil">Nama</a> | <a href="#" title="Logout">Logout</a></header>
+    <nav>
+    	<ul>
+        	<li>
+            <li><a href="<?php echo base_url('dasbor') ?>">Home</a></li>
+            <li><a href="<?php echo base_url() ?>assets/post.html">Dashboard</a></li>
+            <li><a href="<?php echo base_url('index.php/user_controller/user') ?>">Update User</a></li>
+            <li><a href="<?php echo base_url() ?>assets/templates.html">Profile</a></li>
+        </ul>
+    </nav>
+    <article>
+      <h1>Add User</h1>
+      <form name="form1" method="post" action="">
+        <p>
+          <label for="nama">Nama lengkap</label>
+          <input type="text" name="nama" id="nama" placeholder="Nama lengkap">
+        </p>
+        <p>
+          <label for="tanggal_lahir">Tanggal lahir</label>
+          <input type="text" name="tanggal_lahir" id="tanggal_lahir" placeholder="YYYY-MM-DD">
+        </p>
+        <p>
+          <label for="email">Email</label>
+          <input type="text" name="email" id="email" placeholder="Email">
+        </p>
+        <p>
+          <label for="username">Username</label>
+          <input type="text" name="username" id="username" placeholder="Username">
+        </p>
+        <p>
+          <label for="password">Password</label>
+          <input type="text" name="password" id="password" placeholder="Password">
+        </p>
+        <p>
+          <input name="submit" type="submit" class="full" id="submit" value="Simpan User">
+        </p>
+      </form>
+	      
+    </article>
+    <!-- Footer Area -->
+    <script src="jquery/external/jquery/jquery.js"></script>
+	<script src="jquery/jquery-ui.js"></script>
+    <!-- Utk datepicker -->
+	<script type="text/javascript">
+    $( "#tanggal_lahir" ).datepicker({
+        inline: true,
+        dateFormat: "yy-mm-dd",
+        changeYear: true,
+        changeMonth: true,
+        numberOfMonths: 1
+    });
+    </script>
+    
+    <div class="clearfix"></div>
+    <footer>Web design by <a href="http://javawebmedia.com" title="School of graphic &amp; web design" target="_blank">tjah klaten</a></footer>
+</section>
+</body>
+</html>
